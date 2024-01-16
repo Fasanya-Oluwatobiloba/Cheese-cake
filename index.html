@@ -9,7 +9,7 @@
 </head>
 <body class="bg-bg">
     <header style="background-image: url(./img/Background.png); background-size: cover;" class="lg:h-[620px]  ">
-        <nav class="flex items-center md:justify-around sm:mb-0 mb-5">
+        <nav class="flex items-center md:justify-around justify-between sm:mb-0 mb-5">
             <div>
                 <img src="./img/LOGO OF CHEESECAKE.png" class="xl:w-[150px] lg:w-[140px] md:w-[100px] w-[100px]">
             </div>            
@@ -26,6 +26,23 @@
             <div class="hidden md:block">
                 <button class="lg:text-base md:text-sm border-2 border-brown text-brown lg:px-3 md:px-2 lg:py-1.5 md:py-1 rounded-3xl">Sign Up</button>
             </div>
+
+            <div id="menu" class="hidden h-44 absolute top-20 left-72 inset-0">
+                <ul class="md:flex items-center justify-center text-base text-white bg-brown rounded-lg w-32 text-center">
+                    <li class="bg-white text-brown rounded-t-lg pb-3">Home</li>
+                    <li class="pb-3">Menu</li>
+                    <li class="pb-3">Contact</li>
+                    <li class="pb-3">About Us</li>
+
+                    <li><button class="lg:text-base md:text-sm text-white pb-2">Sign Up</button></li>
+                </ul>
+            </div>
+
+            <div id="hamburger" class="lg:hidden cursor-pointer z-50 w-10">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            
         </nav>
 
         <div class="md:flex items-center font-Inika">
@@ -159,6 +176,27 @@
             </div>
         </div>
     </div>
+
+
+    <script>
+        //Mobile view
+        const hamburger = document.querySelector('#hamburger');
+        const menu = document.querySelector('#menu');
+        const hlink = document.querySelector('hlink');
+        const fasolid = document.querySelector(".fa-solid");
+
+        hamburger.addEventListener("click", () => {
+            menu.classList.toggle('hidden');
+            fasolid.classList.toggle('fa-xmark');
+        })
+
+        hlink.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                fasolid.classList.toggle('fa-xmark');
+            })
+        })
+    </script>
 </body>
 </html>
 
