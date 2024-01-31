@@ -5,6 +5,10 @@ module.exports = {
     fontFamily: {
       'Inika': ['Inika'],
     },
+    screens: {
+      'small': '425px',
+      'smallest': '375px',
+    },
     extend: {
       colors: {
         "brown": "#6A4028",
@@ -14,6 +18,7 @@ module.exports = {
         "colors": "rgba(0, 0, 0, 0.70)",
         "third": "#6A4028F0",
         "last": "#734B33",
+        "contact": "#FCAE36",
       }
     },
   },
